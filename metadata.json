@@ -1,0 +1,8 @@
+{
+	"name": "Custom Stylesheet",
+	"author": "Patrick O'Connell",
+	"description": "Add the custom stylesheet to FreshRSS.",
+	"version": "0.1.0",
+	"entrypoint": "CustomStylesheet",
+	"type": "user"
+}

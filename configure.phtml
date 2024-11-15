@@ -1,0 +1,26 @@
+<?php
+declare(strict_types=1);
+/** @var CustomStylesheetExtension $this */
+?>
+<form action="<?php echo _url('extension', 'configure', 'e', urlencode($this->getName())); ?>" method="post">
+	<input type="hidden" name="_csrf" value="<?php echo FreshRSS_Auth::csrfToken(); ?>" />
+	<div class="form-group">
+
+		<label class="group-name" for="stylesheet_url"><?php echo _t('ext.custom_stylesheet.stylesheet_url'); ?></label>
+		<div class="group-controls">
+			<input type="text" id="stylesheet_url" name="stylesheet_url" value="<?php echo $this->getStylesheetUrl(); ?>">
+		</div>
+	</div>
+
+	<div class="form-group form-actions">
+		<div class="group-controls">
+			<button type="submit" class="btn btn-important"><?php echo _t('gen.action.submit'); ?></button>
+			<button type="reset" class="btn"><?php echo _t('gen.action.cancel'); ?></button>
+		</div>
+	</div>
+</form>
+
+<p>
+	<?php echo _t('ext.custom_stylesheet.updates'); ?>
+	<a href="https://github.com/Rambomst/freshrss-extension-custom-stylesheet" target="_blank">GitHub</a>.
+</p>
